@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate 3D Racing</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <div id="game">
+    <div id="hud">
+      <div class="hud-item">
+        <small>SPEED</small>
+        <strong><span id="speed">0</span> <small>KM/H</small></strong>
+      </div>
+      <div class="hud-item">
+        <small>DISTANCE</small>
+        <strong><span id="distance">0</span> m</strong>
+      </div>
+      <div class="hud-item">
+        <small>SCORE</small>
+        <strong id="score">0</strong>
+      </div>
+    </div>
+
+    <div id="nitroBox">
+      <span>NITRO</span>
+      <div class="nitro-track">
+        <div id="nitroFill"></div>
+      </div>
+    </div>
+
+    <div id="message">
+      <h1>ULTIMATE RACING</h1>
+      <p>3D HIGHWAY CHALLENGE</p>
+      <button id="startBtn">START RACE</button>
+      <div class="instructions">
+        WASD / ARROW KEYS TO DRIVE<br>
+        SPACE TO USE NITRO
+      </div>
+    </div>
+
+    <div id="gameOver" class="hidden">
+      <h1>RACE OVER!</h1>
+      <p>Score: <span id="finalScore">0</span></p>
+      <p>Distance: <span id="finalDistance">0</span> m</p>
+      <button id="restartBtn">RACE AGAIN</button>
+    </div>
+
+    <div id="controls">
+      <div class="steering">
+        <button id="leftBtn">◀</button>
+        <button id="rightBtn">▶</button>
+      </div>
+      <div class="pedals">
+        <button id="brakeBtn">BRAKE</button>
+        <button id="gasBtn">GAS</button>
+        <button id="nitroBtn">NITRO ⚡</button>
+      </div>
+    </div>
+
+    
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
